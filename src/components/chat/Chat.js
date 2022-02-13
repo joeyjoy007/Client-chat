@@ -5,6 +5,7 @@ import {useLocation} from 'react-router-dom'
 import './Chat.css'
 import InfoBar from '../infoBar/InfoBar'
 import Input from '../input/Input'
+import Messages from '../messages/Messages'
 
 let socket
 
@@ -52,6 +53,7 @@ const location = useLocation()
   
 
   const sendMessage = (e)=>{
+    console.log(34)
    
     e.preventDefault()
    
@@ -67,6 +69,7 @@ console.log(message,messages)
     <div className='outerContainer'>
     <div className='container'>
  <InfoBar room = {room}/>
+ <Messages messages={messages} name={name}/>
  <Input message={message} setMessage={setMessage} sendMessage={sendMessage}/>
     </div>
     </div>
